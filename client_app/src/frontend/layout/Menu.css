@@ -1,0 +1,13 @@
+.card{
+    text-align: left;
+    padding-left:20px;
+    padding-top: 20px;
+    list-style-type: none;
+}
+.row{
+    list-style-type: none;
+}
+
+.col-6 ul li{
+   list-style-type: none;
+}

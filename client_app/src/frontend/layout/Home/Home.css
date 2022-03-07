@@ -1,0 +1,14 @@
+h3 {
+  /* font-family: cursive; */
+  color: brown;
+}
+h5 {
+  /* font-family: cursive; */
+  padding: 5px 5px;
+  word-spacing: 2px;
+}
+.img1 {
+  width: 80px;
+  height: 80px;
+  margin-right: 110px;
+}
