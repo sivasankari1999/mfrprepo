@@ -11,38 +11,35 @@ export default function OrderOnline() {
     const getUsers = async () => {
         const users = await axios.get('http://localhost:5000/OrderOnline');
         setfoodList(users.data.foodList);
-        };
-        useEffect(() => {
+    };
+    useEffect(() => {
         getUsers();
-        }, []);
+    }, []);
     console.log(foodList);
     return (
         <>
-        <Navbar/>
-        <div className="container">
-            {
-                <div className="row grid-container">
-                    <div className="maincontainer">
-                        {
-                            foodList.map((food, ind) => {
-                                return (
-                                    <div className="grid-item-container"
-                                        key={ind} >
-                                         <img src={require(`../../assets/img/${food.image_path}`)} className="Orderonlineimg" alt="some img" ></img>
-                                         <h5>{food.name}</h5>
-                                         <h5>{food.description}</h5>
-                                         <h5>{food.price}</h5>
-                                         <button className="mb-5">Add</button>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-                </div>
-            }
-             
-        </div>
-        <div className="pt-5">
+            <Navbar />
+            <div className="container">
+                { foodList.map((food, ind) => {
+                    return (
+                    <div className="card_container bg-light"   key={ind}>
+                       
+                            <div className="card ">
+                                <img  src={require(`../../assets/img/${food.image_path}`)} className="card-img-top"  alt="Card image cap" />
+                                <div className="card-body" id="card-1">
+                                    <h4 className="card-title">{food.name}</h4>
+                                    <h6 className="card-subtitle pt-1">{food.description}</h6>
+                                    <h4 className="cardprice mt-3">₹{food.price}</h4>
+                                    <button className="mt-3">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                    )
+                })
+                }
+            </div>
+            <div className="pt-5">
                 <Footer></Footer>
             </div>
         </>

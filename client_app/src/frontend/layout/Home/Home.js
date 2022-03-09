@@ -17,7 +17,7 @@ export default function Home() {
         <Slider />
         <div className=" py-4 row">
           <div className="card py-2  col-6 px-2">
-            <h3>
+            <h3 className="mt-2 mx-3" >
               Our Chef{" "}
               <span>
                 {" "}
@@ -29,7 +29,7 @@ export default function Home() {
               </span>
             </h3>
 
-            <h5>
+            <h5 className="content mt-4 mx-3">
               With 20 years of experience cooking in the finest restaurants, our
               chef is excited to present their vision to you and all our guests.
               Our caring and committed staff make sure you have a fantastic
@@ -49,7 +49,7 @@ export default function Home() {
               </span>
             </h3>
             <br />
-            <h5>
+            <h5 className="content">
               We refuse to compromise on quality in our restaurant. That's why
               we source our fresh ingredients from local farmers' markets. No
               matter what time of year, you can be sure you're eating the best
@@ -70,7 +70,7 @@ export default function Home() {
               />
             </span>
           </h3>
-          <h5>
+          <h5 className="content">
             We have worked to package our meals in a way that lets you bring the
             quality of our meals into your home. Bringing the Best Meals to Your
             doorstep{" "}

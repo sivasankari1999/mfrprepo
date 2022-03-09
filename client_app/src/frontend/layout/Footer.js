@@ -5,8 +5,8 @@ export default function Footer(){
     return(
       <div className="footer">
         <div>
-          <h5 className="text-start">Copyright © 2022 Curry Kitchen- All Rights Reserved.</h5>
-          <h6>currykitchen@gmail.com</h6>
+          <h5 className="text-start copyright">Copyright © 2022 Curry Kitchen- All Rights Reserved.</h5>
+          <h6 className="mail">currykitchen@gmail.com</h6>
         </div>
         <div className="link-items pb-0 pt-3 px-2">
         <Link to='/contactus' id="link-item">

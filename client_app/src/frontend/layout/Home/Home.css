@@ -1,9 +1,9 @@
 h3 {
-  /* font-family: cursive; */
+  font-family: cursive; 
   color: brown;
 }
-h5 {
-  /* font-family: cursive; */
+.content {
+  font-family: cursive; 
   padding: 5px 5px;
   word-spacing: 2px;
 }
