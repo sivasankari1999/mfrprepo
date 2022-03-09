@@ -8,7 +8,7 @@ export default function Menu() {
         <>
         <Navbar/>
         <div>
-           <img src={require("../../assets/menu.jpg")} alt=""/>
+           <img src={require("../../assets/img/menu.jpg")} alt=""/>
             <br/>
             <br/>
             <br/>
@@ -80,14 +80,14 @@ export default function Menu() {
 
                 <div className="col-6 px-1 py-1">
                     <h3>Soft drinks</h3>
-                    <li>Masala Chai Tea (Hot or Iced) 4</li>
-                    <li>Black and Herbal Tea 2.50</li>
-                    <li>Indian Spiced Iced tea 3</li>
-                    <li>Mango / Strawberry / Banana Lassi 4</li>
-                    <li>Salt Lassi 4</li>
-                    <li>Coke/diet/sprite</li>
-                    <li>Smart Water 1L 4</li>
-                    <li>Masala Chai Frappuccino 6</li>
+                    <li>Masala Chai Tea (Hot or Iced) </li>
+                    <li>Black and Herbal Tea </li>
+                    <li>Indian Spiced Iced tea </li>
+                    <li>Mango / Strawberry / Banana Lassi </li>
+                    <li>Salt Lassi </li>
+                    <li>Coke/sprite</li>
+                    <li>Smart Water 1L </li>
+                    <li>Masala Chai Frappuccino </li>
                 </div>
             </div>
             </div>

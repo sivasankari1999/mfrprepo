@@ -1,6 +1,6 @@
 import React from "react";
 
-import MultiplePizzas from "../../assets/masala.jpg" ;
+import MultiplePizzas from "../../assets/img/masala.jpg" ;
 import "./AboutUs.css";
 import Footer from "./Footer";
 import Navbar from "./Navbar";

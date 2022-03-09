@@ -11,31 +11,31 @@ function Navbar() {
                     Curry Kitchen
                 </Link>
                 <ul>
-                    <li><Link eventKey="Home" to="/home">
+                    <li><Link  to="/home">
                         Home
                     </Link></li>
-                    <li> <Link eventKey="Menu" to="/menu">
+                    <li> <Link  to="/menu">
                         Menu
                     </Link></li>
-                    <li> <Link eventKey="OrderOnline" to="/OrderOnline">
+                    <li> <Link  to="/OrderOnline">
                         OrderOnline
                     </Link></li>
                     <li>
                         <NavDropdown title="More" id="nav-dropdown">
                             <NavDropdown.Item >
-                                <NavLink eventKey="aboutus" to="/aboutus" id="nav-item">
+                                <Link to="/aboutus" id="nav-item">
                                     About Us
-                                </NavLink>
+                                </Link>
                             </NavDropdown.Item >
                             <NavDropdown.Item >
-                                <NavLink eventKey="Contactus" to="/contactus" id="nav-item">
+                                <Link to="/contactus" id="nav-item">
                                     Contact us
-                                </NavLink>
+                                </Link>
                             </NavDropdown.Item>
                         </NavDropdown>
                     </li>
                     <li>
-                    <Link eventKey="logout" to="/">
+                    <Link  to="/logout">
                         Log Out
                     </Link>
                     </li>

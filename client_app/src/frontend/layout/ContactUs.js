@@ -1,5 +1,5 @@
 import React from "react";
-import PizzaLeft from "../../assets/foods.jpg";
+import PizzaLeft from "../../assets/img/foods.jpg";
 import "./ContactUs.css";
 import Footer from "./Footer";
 import Navbar from "./Navbar";

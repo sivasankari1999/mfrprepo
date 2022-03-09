@@ -5,6 +5,7 @@ import ContactUs from './ContactUs';
 import Header from './Header';
 import Home from './Home/Home';
 import Login from './Login';
+import Logout from './Logout';
 import Menu from './Menu';
 import More from './More';
 import Navbar from './Navbar';
@@ -28,7 +29,7 @@ function Layout() {
                 <Route path="/More" element={<More />}></Route>
                 <Route path="/aboutus" element={<AboutUs />}></Route>
                 <Route path="/contactUs" element={<ContactUs />}></Route>
-
+                <Route path="/logout" element={<Logout />}></Route>
             </Routes>
 
         </div>

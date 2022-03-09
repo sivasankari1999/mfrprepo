@@ -29,7 +29,7 @@ export default function Header() {
         <h1>Curry Kitchen</h1>
       </div>
       <div className="main-image">
-        <img src={require("../../assets/img-bg.jpg")}></img>
+        <img src={require("../../assets/img/img-bg.jpg")}></img>
 
         <div className="centred">
           Join us to feed your hunger.

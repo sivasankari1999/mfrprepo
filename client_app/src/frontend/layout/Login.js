@@ -24,6 +24,7 @@ function Login() {
       .post(url, data)
       .then((res) => {
         console.log("res.data: ", res.data);
+        //localStorage.setItem(res.data.token)
         navigate("/home");
       })
       .catch((err) => {

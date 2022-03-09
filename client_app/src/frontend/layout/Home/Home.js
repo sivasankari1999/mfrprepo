@@ -22,7 +22,7 @@ export default function Home() {
               <span>
                 {" "}
                 <img
-                  src={require("../../../assets/chef.jfif")}
+                  src={require("../../../assets/img/chef.jfif")}
                   alt=""
                   className="img1"
                 />
@@ -42,7 +42,7 @@ export default function Home() {
               <span>
                 {" "}
                 <img
-                  src={require("../../../assets/seasonal.jpg")}
+                  src={require("../../../assets/img/seasonal.jpg")}
                   alt=""
                   className="img1"
                 />
@@ -64,7 +64,7 @@ export default function Home() {
             <span>
               {" "}
               <img
-                src={require("../../../assets/delivery.jfif")}
+                src={require("../../../assets/img/delivery.jfif")}
                 alt=""
                 className="img1"
               />

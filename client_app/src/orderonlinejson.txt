@@ -1,0 +1,219 @@
+foodList : [
+                {
+                    Starters: [
+                        {
+                            "name": "Vegetable Samosa",
+                            "description": "Crisp Pastry filled with Potato, peas, spices and deep fried",
+                            "price": 40,
+                            "image_path": "vegetable_samosa.jpg"
+                        },
+                        {
+                            "name": "Vege Samosa Chat",
+                            "description": "Smashed Veg samosa Mixed chana with yogurt, tamarind, Mint and chat masala spices) Could be madevegan and gluten free",
+                            "price": 70,
+                            "image_path": "vegetable_samosa.jpg",
+                        },
+                        {
+                            "name": "Tandoori Wings",
+                            "description": "Chili Garlic Sauce",
+                            "price": 200,
+                            "image_path": "Tandoori Wings.jpg",
+                        },
+                        {
+                            "name": "Vegan Wings ",
+                            "description": "Battered cauliflower with corn starch/Indian spices tossed with garlic chili sauce.",
+                            "price": 170,
+                            "image_path": "vegan_wings.jpg"
+                        }
+                    ],
+        
+                    Briyani: [
+                        {
+                            "name": "Vegetable Briyani",
+                            "description": "Vegetable biryani is an aromatic rice dish made with basmati rice, mix veggies, herbs & biryani spices",
+                            "price": 120,
+                            "image_path": "veg_briyani.jpg"
+                        },
+                        {
+                            "name": "Paneer briyani",
+                            "description": "this one pot meal has basmati rice cooked with paneer (Indian cottage cheese) and fragrant spices",
+                            "price": 220,
+                            "image_path": "paneer_briyani.jpg"
+                        },
+                        {
+                            "name": "Shrimp",
+                            "description": "Shrimp is a type of shellfish similar to crab or lobster and therefore considered seafood.",
+                            "price": 200,
+                            "image_path": "shrimp.jpg"
+                        },
+                        {
+                            "name": "Chicken Briyani",
+                            "description": "Chicken Biryani is a savory chicken and rice dish that includes layers of chicken, rice, and aromatics that are steamed together.",
+                            "price": 100,
+                            "image_path": "chicken.jpg"
+                        },
+                        {
+                            "name": "Raita",
+                            "description": "Raita is a condiment dip or sauce that is served as a side with various meals in Indian cuisine. ",
+                            "price": 50,
+                            "image_path": "raita.jpg"
+                        }
+                    ],
+        
+                    Curries: [
+                        {
+                            "name": "Famous Tikka Masala",
+                            "description": "cooked with tomato onion basedcream sauce most popular",
+                            "price": 500,
+                            "image_path": "Tikka.jpg",
+                        },
+                        {
+                            "name": "Korma",
+                            "description": "cooked with cream, Nuts and raisins to give very delicate taste",
+                            "price": 80,
+                            "image_path": "Korma.jpg"
+                        },
+                        {
+                            "name": "Saag",
+                            "description": "spinach cooked with cream, freshly ground spices, garlic, ginger, onion and tomato",
+                            "price": 50,
+                            "image_path": "saag.jpg"
+                        }
+                    ],
+                    SoupandSalad: [
+                        {
+                            "name": "Daal Mushroom soup /Tomato Coconut soup ",
+                            "description": "Made from mushroom, low fat milk and a bit of cornflour",
+                            "price": 250,
+                            "image_path": "dal_mushroom.jpg"
+                        },
+                        {
+                            "name": "Mulligatawny Soup (Chicken and lentil)",
+                            "description": "Basically a curry soup, most often made with chicken, vegetables, apples, and rice.",
+                            "price": 60,
+                            "image_path": "mulligatawny.jpg"
+                        },
+                        {
+                            "name": "Veg Salad",
+                            "description": "Salad greens contain Vitamin A, Vitamin C, beta-carotene, calcium, folate, fiber, and phytonutrients",
+                            "price": 50,
+                            "image_path": "veg_salad.jpg"
+                        }
+                    ],
+        
+                    VegetarianSpecialities : [
+                        {
+                            "name": "Vegetable Korma",
+                            "description": "Mixed vegetables with cream ,coconut ,nuts and rasins Vegan15",
+                            "price": "120",
+                            "image_path": "vegkurma.jpg"
+                        },
+                        {
+                            "name": "Plain Saag ",
+                            "description": "Spinach Cooked with cream sauce",
+                            "price": "150",
+                            "image_path": "plainsaag.jpg"
+                        },
+                        {
+                            "name": "Saag Paneer",
+                            "description": "Spinach with house made cheese ,paneer & cream",
+                            "price": "180",
+                            "image_path": "panneersaag.jpg"
+                        },
+                        {
+                            "name": "Paneer Masala",
+                            "description": "House made Cheese with Cream sauce",
+                            "price": "180",
+                            "image_path": "paneermasala.png"
+                        }
+                    ],
+                    IndianSweets: [
+                        {
+                            "name": "Kheer",
+                            "description": "Rice pudding",
+                            "price": "70",
+                            "image_path": "kheer.jfif"
+                        },
+                        {
+                            "name": "Gulab Jamun ",
+                            "description": "Milk Balls in Rose water",
+                            "price": "70",
+                            "image_path": "gulabjamun.jfif"
+                        },
+                        {
+                            "name": "Gajar Halwa",
+                            "description": "Carrot pudding",
+                            "price": "100",
+                            "image_path": "ghajarhalwa.jfif"
+                        },
+                        {
+                            "name": "Moong Daal Halwa ",
+                            "description": "Yellow Lentils, nuts, and butter pudding",
+                            "price": "100",
+                            "image_path": "moongdhalhalwa.jfif"
+                        }
+                    ],
+                    SoftDrinks : [
+                        {
+                            "name": "Masala Chai Tea ",
+                            "description": "Home made Hot chai with added Indain spices",
+                            "price": "170",
+                            "image_path": "masalachai.jfif"
+                        },
+                        {
+                            "name": "Black and herbal Tea ",
+                            "description": "Home made Black tea with added herbal spices",
+                            "price": "120",
+                            "image_path": "blacktea.jfif"
+                        },
+                        {
+                            "name": "Indian spiced Ice Tea ",
+                            "description": "Home made  Ice chai with added Indain spices",
+                            "price": "120",
+                            "image_path": "icetea.jfif"
+                        },
+                        {
+                            "name": "MangoLassi ",
+                            "description": "Iced Lassi with fresh mango pulp",
+                            "price": "200",
+                            "image_path": "mangolassi.jfif"
+                        },
+                        {
+                            "name": "StrawberryLassi ",
+                            "description": "Iced Lassi with fresh strawberries",
+                            "price": "240",
+                            "image_path": "strawberrylassi.jfif"
+                        },
+                        {
+                            "name": "BannanaLassi ",
+                            "description": "Iced Lassi with fresh bannana",
+                            "price": "160",
+                            "image_path": "bannanalassi.jfif"
+                        },
+                        {
+                            "name": "SaltLassi ",
+                            "description": "Iced Salt Lassi",
+                            "price": "80",
+                            "image_path": "saltlassi.jfif"
+                        },
+                        {
+                            "name": "Smart Water 1L",
+                            "description": " Cold mineral water ",
+                            "price": "50",
+                            "image_path": "smartwater.jfif"
+                        },
+                        {
+                            "name": "Coke/Sprite",
+                            "description": " Cold Coke or Sprite",
+                            "price": "40",
+                            "image_path": "cokesprite.jfif"
+                        },
+                        {
+                            "name": "Masala Chai Frappuccino",
+                            "description": " Frappuccino Syrup + Chai Concentrate + Whipped Cream + Cinnamon Powder ",
+                            "price": "50",
+                            "image_path": "frappuccino.jfif"
+                        }
+                    ]
+                }
+            ]
