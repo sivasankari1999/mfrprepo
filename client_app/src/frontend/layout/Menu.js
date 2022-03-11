@@ -20,7 +20,7 @@ export default function Menu() {
             <br/> are facility that uses nuts, raisins; gluten so may contain traces of it.</p>
 
 
-            <div className="card">
+            <div className="card2">
                 <div className="row ">
                 <div className="col-6 px-1 py-1">
                 <h3>STARTERS</h3>

@@ -20,6 +20,9 @@ function Navbar() {
                     <li> <Link  to="/OrderOnline">
                         OrderOnline
                     </Link></li>
+                    <li> <Link  to="/cart">
+                        Cart
+                    </Link></li>
                     <li>
                         <NavDropdown title="More" id="nav-dropdown">
                             <NavDropdown.Item >
@@ -35,6 +38,7 @@ function Navbar() {
                         </NavDropdown>
                     </li>
                     <li>
+                    
                     <Link  to="/logout">
                         Log Out
                     </Link>

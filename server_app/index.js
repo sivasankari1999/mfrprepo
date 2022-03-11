@@ -74,6 +74,11 @@ app.post("/signup", async (req, res) => {
     console.log("foodlist:",foodList);
     res.send({foodList});
   })
+  app.get("/cart",async (req,res)=>{
+    const { body } = req;
+    console.log("body:",body);
+    res.send({status:"success",message:"Cart is done"});
+  })
   app.post("/logout", function (req, res) {
     const { body, session } = req;
     

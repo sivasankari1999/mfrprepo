@@ -16,7 +16,7 @@ export default function Home() {
       <div>
         <Slider />
         <div className=" py-4 row">
-          <div className="card py-2  col-6 px-2">
+          <div className="card2 py-2  col-6 px-2">
             <h3 className="mt-2 mx-3" >
               Our Chef{" "}
               <span>
@@ -36,7 +36,7 @@ export default function Home() {
               experience with us.
             </h5>
           </div>
-          <div className="card py-2 col-6 px-2">
+          <div className="card2 py-2 col-6 px-2">
             <h3>
               Seasonal and Local{" "}
               <span>

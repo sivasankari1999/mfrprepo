@@ -1,18 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './frontend/layout/Header';
 import Layout from './frontend/layout/Layout';
-import { Route, Routes } from 'react-router';
-import Home from './frontend/layout/Home/Home';
-import Menu from './frontend/layout/Menu';
-import OrderOnline from './frontend/layout/OrderOnline';
-import More from './frontend/layout/More';
-import AboutUs from './frontend/layout/AboutUs';
-import ContactUs from './frontend/layout/ContactUs';
-import Navbar from './frontend/layout/Navbar';
-import Login from './frontend/layout/Login';
-import Signup from './frontend/layout/Signup';
+//import Layout1 from './Ict3/Layout1';
+
+
+
 
 
 
@@ -55,7 +48,7 @@ function App() {
       {/*<EmployeesOperations></EmployeesOperations>*/}
       {/*<Navbar></Navbar>*/}
       <Layout></Layout>
-    
+      
       {/*<Routes>
 
         <Route path="/" element={<Header />}></Route>
