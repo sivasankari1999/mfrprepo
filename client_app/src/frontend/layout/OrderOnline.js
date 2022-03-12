@@ -3,6 +3,7 @@ import axios from "axios";
 import './OrderOnline.css';
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 //import { Navbar } from "react-bootstrap";
 export default function OrderOnline({ setCart, cart }) {
     let Starters = 'Starters';
@@ -41,6 +42,12 @@ export default function OrderOnline({ setCart, cart }) {
     }
     setCart(newCart);
       };
+      const getCartTotal = () => {
+        return cart.reduce(
+          (sum, { quantity }) => sum + quantity,
+          0
+        );
+      };
     return (
         <>
             <Navbar />
@@ -55,6 +62,18 @@ export default function OrderOnline({ setCart, cart }) {
                 <option value={IndianSweets} className="option1">{IndianSweets}</option>
                 <option value={SoftDrinks} className="option1">{SoftDrinks}</option>
             </select>
+            <span >
+            <Link  to="/cart" className="cartpage">
+                        Cart ({getCartTotal()})<span>
+                {" "}
+                <img
+                  src={require("../../assets/img/cart.jfif")}
+                  alt=""
+                  className="img1"
+                />
+              </span>
+                    </Link>
+            </span>
             <div className="container">
                 {selectedCategory=="All" &&
                      foodList.map((food, ind) => {

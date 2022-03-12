@@ -12,7 +12,7 @@ export default function Cart({ cart, setCart }) {
         setCart([]);
     };
 
-    const setQuantity = (food, price) => {
+    const setQuantity = (food, price,quantity) => {
         const newCart = [...cart];
         newCart.find(
             (item) => item.name == food.name
@@ -25,6 +25,7 @@ export default function Cart({ cart, setCart }) {
             cart.filter((food) => food != foodToRemove)
         );
     };
+  
     return (
         <>
             <h1>Cart</h1>

@@ -3,6 +3,7 @@ import {Link, NavLink } from "react-router-dom";
 import './Navbar.css';
 import { Nav, NavDropdown } from "react-bootstrap";
 import Home from "./Home/Home";
+import { propTypes } from "react-bootstrap/esm/Image";
 function Navbar() {
     return (
         <header>
@@ -20,9 +21,7 @@ function Navbar() {
                     <li> <Link  to="/OrderOnline">
                         OrderOnline
                     </Link></li>
-                    <li> <Link  to="/cart">
-                        Cart
-                    </Link></li>
+                  
                     <li>
                         <NavDropdown title="More" id="nav-dropdown">
                             <NavDropdown.Item >

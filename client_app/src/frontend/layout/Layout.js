@@ -19,13 +19,13 @@ import Signup from './Signup';
 
 function Layout() {
     const [cart, setCart] = useState([]);
+   
     const getCartTotal = () => {
         return cart.reduce(
           (sum, { quantity }) => sum + quantity,
           0
         );
       };
-    
     return (
         <div>
             <Routes>
@@ -37,7 +37,7 @@ function Layout() {
                 <Route path="/home" element={<Home />}></Route>
                 <Route path="/Menu" element={<Menu />}></Route>
                 <Route path="/OrderOnline" element={<OrderOnline cart={cart} setCart={setCart} />}></Route>
-                <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>}></Route>
+                <Route path="/cart" element={<Cart  cart={cart} setCart={setCart}/>}></Route>
                 <Route path="/More" element={<More />}></Route>
                 <Route path="/aboutus" element={<AboutUs />}></Route>
                 <Route path="/contactUs" element={<ContactUs />}></Route>

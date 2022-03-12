@@ -86,4 +86,15 @@
     color: #8a2b06;
     font-size: 20px;
 }
+.cartpage{
+    float: right;
+    margin-right: 120px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #8a2b06;
+}
+.img1{
+    width: 30px;
+    height: 30px;
+}
 
