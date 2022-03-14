@@ -1,39 +1,43 @@
 .fooditems {
-    height: auto; 
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   justify-content: space-evenly;
-   gap:2em 2em; 
-   margin:  auto ;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  gap: 2em 2em;
+  margin: auto;
 }
-.card_container1{
-   width: 350px;
-   height: 600px;
+.card_container1 {
+  width: 350px;
+  height: 600px;
 }
-.card-title1{
-   color: black;
-   font-size: 25px;
+.card-title1 {
+  color: black;
+  font-size: 25px;
 }
-.card-img-top1{
-  width: fit-content;
-   height: 250px;
+.card-img-top1 {
+  width: 350px;
+  height: 250px;
 }
-.card1 h4{
+.card1 h4 {
   color: white;
   font-size: 20px;
 }
-.card1{
+.card1 {
   margin-top: 5%;
   height: 500px;
-  padding:0px 0px 0px 0px;
-  background-color:#8a2b06;
-
+  padding: 0px 0px 0px 0px;
+  background-color: #8a2b06;
 }
-.card-title1{
-   color: white;
+.card-title1 {
+  color: white;
 }
-.card-subtitle1{
-   padding: auto;
-   color:black;
-   font-size: 16px;
+.card-subtitle1 {
+  padding: auto;
+  color: black;
+  font-size: 16px;
+}
+.removefromcart-btn {
+  background-color: white;
+  color: #8a2b06;
+  font-weight: bolder;
 }

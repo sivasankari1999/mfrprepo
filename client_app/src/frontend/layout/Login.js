@@ -93,7 +93,7 @@ function Login() {
             <p className="m-0">{errormsg}</p>
           </div>
           <div>
-            <a href="">Forgot Password?</a>
+            <Link to="/forgotpassword">Forgot Password?</Link>
           </div>
           <div>
             <button className="btn btn-danger m-3" style={{ width: "13rem" }}>
