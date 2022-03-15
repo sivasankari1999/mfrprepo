@@ -1,0 +1,70 @@
+h3 {
+    font-family: cursive; 
+    color: slateblue
+  }
+  .content {
+    font-family: cursive; 
+    padding: 5px 5px;
+    word-spacing: 2px;
+  }
+  .img1 {
+    width: 80px;
+    height: 80px;
+    margin-right: 110px;
+  }
+  .container1 {
+    height: auto; 
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-content: space-evenly;
+   gap:2em 2em; 
+   margin: 0px auto;
+   margin-left: 25px;
+}
+.card_container1{
+   width: 300px;
+   height: 700px;
+}
+.card-title1{
+   color: black;
+   font-size: 25px;
+}
+.card-img-top1{
+  width: 300px;
+   height: 380px;
+}
+.card1 h4{
+  color: white;
+  font-size: 20px;
+}
+.card1{
+  margin-top: 5%;
+  width: fit-content;
+  height: 700px;
+  padding:0px 0px 0px 0px;
+  background-color: slateblue;
+
+}
+.card-title1{
+   color: white;
+   font-family: cursive;
+}
+.card-body1{
+   padding: 5px 10px;
+   color:black;
+   font-size: 14px;
+   font-family: cursive;
+   align-content: stretch;
+}
+.auth{
+  color: white;
+  padding-right: 5px;
+  font-size: 16px;
+  font-family: cursive;
+}
+.lang{
+  color: white;
+  font-size: 16px;
+  padding-right: 5px;
+  font-family: cursive;
+}

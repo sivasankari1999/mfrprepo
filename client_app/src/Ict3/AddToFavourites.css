@@ -1,0 +1,39 @@
+.container1 {
+    height: auto; 
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-content: space-evenly;
+   gap:2em 2em; 
+   margin:  auto ;
+}
+.card_container1{
+   width: 350px;
+   height: 600px;
+}
+.card-title1{
+   color: black;
+   font-size: 25px;
+}
+.card-img-top1{
+  width: fit-content;
+   height: 250px;
+}
+.card1 h4{
+  color: white;
+  font-size: 20px;
+}
+.card1{
+  margin-top: 5%;
+  height: 550px;
+  padding:0px 0px 0px 0px;
+  background-color: slateblue;
+
+}
+.card-title1{
+   color: white;
+}
+.card-body1{
+   padding: auto;
+   color:black;
+   font-size: 16px;
+}

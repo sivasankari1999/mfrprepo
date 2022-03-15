@@ -1,0 +1,51 @@
+.Carthead1 {
+    /* position: fixed; */
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 5px;
+    background-color: #8a2b06;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+  }
+  .Carthead2 h3{
+    color:#fff;
+  }
+  .ship{
+      color: white;
+  }
+.shipping{
+    background-color:#8a2b06;
+    margin: auto;
+    width:1000px;
+    height: 1000px;
+}
+.namefield{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}  
+.paybtn1{
+margin-right: 100px;
+
+/* float: right; */
+align-items: flex-end;
+}
+.radiolabel{
+    color: white;
+}
+.payment{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 105px;
+    margin-top: 35px;
+}

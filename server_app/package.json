@@ -15,6 +15,7 @@
     "express-session": "^1.17.2",
     "mongoose": "^6.2.4",
     "nodemailer": "^6.7.2",
+    "razorpay": "^2.8.1",
     "react-toastify": "^8.2.0"
   }
 }

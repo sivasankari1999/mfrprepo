@@ -2,6 +2,8 @@ var express = require("express");
 var mongoose = require("mongoose");
 var session = require("express-session");
 var nodemailer = require("nodemailer");
+const Razorpay = require("razorpay");
+var crypto = require("crypto");
 var cors = require("cors");
 var app = express();
 require("dotenv").config();
@@ -23,6 +25,8 @@ var transporter = nodemailer.createTransport({
 
 const { User } = require("./models/users");
 const { FoodItems } = require("./models/FoodItems");
+const { Cart } = require("./models/cart");
+const { log } = require("console");
 const connection_string = process.env.CONNECTION_STRING;
 
 app.post("/signup", async (req, res) => {
@@ -209,11 +213,135 @@ app.get("/OrderOnline", async (req, res) => {
   console.log("foodlist:", foodList);
   res.send({ foodList });
 });
-app.get("/cart", async (req, res) => {
+app.get("/users", async (req, res) => {
   const { body } = req;
   console.log("body:", body);
-  res.send({ status: "success", message: "Cart is done" });
+  const foodList = await User.find({}, { _id: 0 });
+  console.log("foodlist:", foodList);
+  res.send({ foodList });
 });
+app.get("/fooditems", async (req, res) => {
+  const { body } = req;
+  console.log("body:", body);
+  const foodList = await FoodItems.find({}, { _id: 0 });
+  console.log("foodlist:", foodList);
+  res.send({ foodList });
+});
+app.post("/cart", async (req, res) => {
+  const { body } = req;
+  console.log("body:", body);
+  const foodExist = await Cart.findOne({ name: body.name });
+  console.log("foodExist: ", foodExist);
+
+  if (foodExist) {
+    return res
+      .status(400)
+      .send({ message: "This item is already added in cart" });
+  }
+  if (!foodExist) {
+  let doc = new Cart();
+  doc.name= body.name;
+  doc.price= body.price;
+  doc.image_path= body.image_path;
+  doc.quantity= body.quantity;
+  doc.save(function (err, result) {
+    if (err) {
+      console.log("err :", err.message);
+      return res.status(400).send(err.message);
+    }
+    return res.send({ status: "success" ,message:"Added to the cart"});
+  });
+}
+
+});
+app.get("/cart",async(req,res)=>{
+  const cartList = await Cart.find({},{_id:0});
+   console.log("cartList:",cartList);
+  res.send({ status: "success", message: "Cart is done",cartList });
+})
+app.delete("/cart",async(req,res)=>{
+  const cartList = await Cart.remove({});
+   //console.log("cartList:",cartList);
+  res.send({ status: "success", message: "Cart is cleared",cartList });
+})
+app.put("/addquantity/cart",async(req,res)=>{
+  let {body}=req;
+  console.log("body:",body);
+  let query={name:body.food.name}
+  body.food.quantity= body.quantity 
+    Cart.updateOne({ name: body.food.name  }, body.food).exec(function (err, result) {
+      if (err) return res.status(400).send(err.message);
+      //console.log("cartList:",cartList);
+      return res.send({status: "success"});
+  })
+})
+app.put("/subquantity/cart",async(req,res)=>{
+  let {body}=req;
+  console.log("body:",body);
+  let query={name:body.food.name}
+  body.food.quantity= body.quantity 
+    Cart.updateOne({ name: body.food.name  }, body.food).exec(function (err, result) {
+      if (err) return res.status(400).send(err.message);
+      //console.log("cartList:",cartList);
+      return res.send({status: "success"});
+  })
+})
+app.post("/removefood/cart",async(req,res)=>{
+  let {body}=req;
+  console.log("body:",body);
+  const cartList = await Cart.deleteOne({name:body.name});
+   console.log("cartList:",cartList);
+  res.send({status:"suceess"});
+})
+app.post("/orders", async (req, res) => {
+
+	try {
+   // console.log("aaaa");
+		const instance = new Razorpay({
+			key_id: process.env.KEY_ID,
+			key_secret: process.env.KEY_SECRET,
+		});
+
+		const options = {
+			amount: req.body.amount * 100,
+			currency: "INR",
+			receipt: crypto.randomBytes(10).toString("hex"),
+		};
+
+		instance.orders.create(options, (error, order) => {
+			if (error) {
+				console.log(error);
+				return res.status(500).json({ message: "Something Went Wrong!" });
+			}
+			res.status(200).send({ data: order });
+		});
+	} catch (error) {
+		res.status(500).send({ message: "Internal Server Error!" });
+		console.log(error);
+	}
+});
+
+app.post("/verify", async (req, res) => {
+	try {
+		const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =
+			req.body;
+		const sign = razorpay_order_id + "|" + razorpay_payment_id;
+		const expectedSign = crypto
+			.createHmac("sha256", process.env.KEY_SECRET)
+			.update(sign.toString())
+			.digest("hex");
+
+		if (razorpay_signature === expectedSign) {
+			return res.status(200).send({ message: "Payment verified successfully" });
+		} else {
+			return res.status(400).send({ message: "Invalid signature sent!" });
+		}
+	} catch (error) {
+		res.status(500).send({ message: "Internal Server Error!" });
+		console.log(error);
+	}
+});
+
 app.post("/logout", function (req, res) {
   const { body, session } = req;
 

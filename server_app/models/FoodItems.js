@@ -10,8 +10,14 @@ const fooditemSchema = new mongoose.Schema({
   price: {
     type: String,
   },
-  image :{
-      type: String,
+  image_path: {
+    type: String,
+  },
+  quantity: {
+    type: String
+  },
+  categories: {
+    type: String,
   }
 });
 

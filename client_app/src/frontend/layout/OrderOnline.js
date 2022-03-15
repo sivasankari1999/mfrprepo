@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 //import { Navbar } from "react-bootstrap";
-export default function OrderOnline({ setCart, cart }) {
+export default function OrderOnline({cartLength}) {
   let Starters = "Starters";
   let Briyani = "Briyani";
   let Curries = "Curries";
@@ -24,24 +24,29 @@ export default function OrderOnline({ setCart, cart }) {
   useEffect(() => {
     getUsers();
   }, []);
-  console.log(foodList);
+  //console.log(foodList);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const addToCart = (food) => {
-    let newCart = [...cart];
-    let itemInCart = newCart.find((item) => food.name === item.name);
-    if (itemInCart) {
-      itemInCart.quantity++;
-    } else {
-      itemInCart = {
-        ...food,
-        quantity: 1,
-      };
-      newCart.push(itemInCart);
-    }
-    setCart(newCart);
-  };
-  const getCartTotal = () => {
-    return cart.reduce((sum, { quantity }) => sum + quantity, 0);
+        // cart = cart.filter((item, ind) => {
+        //   if (item.name == food.name) {
+        //    //alert("Already added to cart");
+        //   }
+        //   return item.name !== food.name;
+        // });
+        // setCart(cart);
+        // let newCart = [...cart, food];
+        // console.log(newCart);
+        // setCart(newCart);
+        const url = "http://localhost:5000/cart";
+    axios
+      .post(url, food)
+      .then((res) => {
+        console.log("res.data: ", res.data);
+        alert(res.data.message)
+      })
+      .catch((err) => {
+        console.log(err.response);
+        alert(err.response.data.message)});    
   };
   return (
     <>
@@ -83,7 +88,7 @@ export default function OrderOnline({ setCart, cart }) {
         </div>
         <span>
           <Link to="/cart" className="cartpage">
-            Cart ({getCartTotal()})
+            Cart ({cartLength})
             <span>
               {" "}
               <img

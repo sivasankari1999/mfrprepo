@@ -1,0 +1,211 @@
+section {font-family: "Lato", sans-serif;}
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#8a2b06;
+  overflow-x: hidden;
+  padding-top: 16px;
+  margin-top: 100px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+  background-color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+header{
+    width: 100%;
+    height: 96px;
+    background-color:#8a2b06;
+   position: fixed;
+}
+.curry{
+    color: white;
+    font-size: 45px;
+    font-family: cursive;
+    text-decoration: none;
+    margin-top: 25px;
+    margin-left: 20px;
+    position: fixed;
+}
+ul{
+    justify-content: right;
+    list-style-type: none;
+    float: right;
+    margin-left: 650px;
+    margin-top: 5px;
+    margin-bottom: 15px ;
+    padding: 15px 20px;
+    color: white;
+} 
+ul li{
+    float: left;
+    padding: 10px 15px;
+}
+ul li a{
+     text-decoration: none;
+     padding: 10px 15px ;
+     font-size: 18px;
+     font-weight: 100;
+     /* margin-left: 550px; */
+     color: white;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#nav-dropdown{
+    padding-top: 1px;
+    color: white;
+    background: #8a2b06;
+}
+#nav-item{
+color:#8a2b06 ;
+}
+body {
+    height: 100%;
+}
+
+#sidebar {
+    height: 1100px;
+    background: green;
+    text-align: center;
+    color: black;
+    padding: 15px;
+    position: fixed;
+}
+.table {
+    width: 1000px; 
+   height: auto;
+   /* margin-top: 15px; */
+   background-color: white;
+   /* border: 2px solid #8a2b06; */
+   border-collapse: collapse;
+   margin-left: 85px;
+ }
+ 
+ thead,th {
+   font-size: 25px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #8a2b06;
+   border-collapse: collapse;
+   padding: 2px 3px;
+   justify-content: center;
+   /* border: 2px solid #8a2b06; */
+ }
+ tbody,tr,td {
+   padding: 2px 3px;
+   border-collapse: collapse;
+   font-size: 20px;
+   text-align: center;
+   /* border-bottom: 3px; */
+   color: #8a2b06;
+   /* border: 2px solid #8a2b06; */
+ }
+ 
+
+ .container {
+    
+    /* width: 1000px; */ 
+    /* height: auto; */
+    margin-left: 190px;
+    /* margin: auto 0px; */
+    /* overflow: hidden; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    grid-gap: 1em 1em;
+    gap: 1em 1em;
+    /* margin: auto; */
+    /* background-color: #8a2b06;
+  }
+  .card_container {
+    width: fit-content;
+    height: fit-content;
+  }
+  .card-title {
+    color: black;
+    font-size: 25px;
+  }
+  .card-img-top {
+    /* width: 300px; */
+    height: 250px;
+    /* padding-right: 16px; */
+  }
+  .card h4 {
+    color: white;
+    font-size: 20px;
+  }
+  .card {
+    margin-top: 5%;
+    /* margin-bottom: 3%;
+     padding-bottom: 2%; */
+    height: 468px;
+    width:290px;
+    /* width: 300px; */
+    padding: 0px 0px 0px 0px;
+    background-color: #8a2b06;
+  }
+  .card-title {
+    color: white;
+  }
+  .card-subtitle {
+    padding: auto;
+    color: black;
+    font-size: 20px;
+  }
+  .cardprice {
+    float: right;
+  }
+  .option1 {
+    color: #8a2b06;
+    font-size: 20px;
+  }
+  .cartpage {
+    float: right;
+    /* margin-right: 120px; */
+    font-size: 30px;
+    text-decoration: none;
+    color: #8a2b06;
+  }
+  .img1 {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .filter_cart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .adminedit, .admindelete {
+    background-color: white;
+    color: #8a2b06;
+    font-weight: bolder;
+  }
+  
+  .adminbtns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
