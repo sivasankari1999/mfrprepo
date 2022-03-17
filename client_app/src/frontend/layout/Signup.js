@@ -30,7 +30,7 @@ function Signup(props) {
         setfullNameErr("");
         setEmailErr("");
         setpasswordErr("");
-        navigate("/home");
+        navigate("/login");
       })
       .catch((err) => {
         console.log(err.response);

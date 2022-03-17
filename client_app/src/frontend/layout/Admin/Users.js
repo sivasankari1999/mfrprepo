@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Adminhome.css"
 import { Link } from "react-router-dom";
+import AdminHome1 from "./AdminHome1";
 export default function Users() {
     let [usersList, setUsersList] = useState([]);
     const getUsers = async () => {
@@ -14,6 +15,7 @@ export default function Users() {
     }, []);
     return (
         <>
+        <AdminHome1/>
             <div className="w3-container">
                 <div id="Users">
                     <table className='table mt-5' style={{ marginLeft: "190px" }}>

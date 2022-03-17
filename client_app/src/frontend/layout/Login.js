@@ -23,9 +23,16 @@ function Login() {
     axios
       .post(url, data)
       .then((res) => {
-        console.log("res.data: ", res.data);
-        //localStorage.setItem(res.data.token)
-        navigate("/home");
+        console.log("res.data: ", res.data.data);
+        let pwd = res.data.data;
+        if(pwd=="Admin$1234")
+        {
+          navigate("/Admin")
+        }
+        else{
+          navigate("/home");
+        }
+        
       })
       .catch((err) => {
         if (err.response) {

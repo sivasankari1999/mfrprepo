@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AdminHome1 from './frontend/layout/Admin/AdminHome1';
-import FoodItems from './frontend/layout/Admin/FoodItems';
-import Users from './frontend/layout/Admin/Users';
-import Orders from './frontend/layout/Admin/Orders';
-import { Route, Routes } from 'react-router';
+
+// import AdminHome1 from './frontend/layout/Admin/AdminHome1';
+// import FoodItems from './frontend/layout/Admin/FoodItems';
+// import Users from './frontend/layout/Admin/Users';
+// import Orders from './frontend/layout/Admin/Orders';
+// import { Route, Routes } from 'react-router';
+import Layout from './frontend/layout/Layout';
 // import Layout from './frontend/layout/Layout';
 // import Address from 'ipaddr.js';
 // import Adminhome from './frontend/layout/Admin/Adminhome';
@@ -38,6 +40,8 @@ import { Route, Routes } from 'react-router';
 //import ColorPicker from './colorpicker/ColorPicker';
 //import Todoapp from './todoapp/Todoapp';
 
+
+
 function App() {
   return (
     <div className="App">
@@ -55,15 +59,16 @@ function App() {
       {/*<PostEmps></PostEmps>*/}
       {/*<EmployeesOperations></EmployeesOperations>*/}
       {/*<Navbar></Navbar>*/}
-      {/* <Layout></Layout>  */}
-       <AdminHome1></AdminHome1>
+      <Layout></Layout>
+     
+       {/* <AdminHome1></AdminHome1>
       <Routes>
 
-        <Route path="/fooditems" element={<FoodItems />}></Route>
+        <Route path="/fooditems" element={<FoodItems  />}></Route>
                 <Route path="/users" element={<Users />}></Route>
                 <Route path="/orders" element={<Orders />}></Route>
 
-      </Routes> 
+      </Routes>  */}
 
       {/*<UseRefdemo></UseRefdemo>*/}
 

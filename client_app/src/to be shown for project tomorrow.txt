@@ -1,0 +1,24 @@
+sign in 
+must enter fields
+different name user not found
+sign up must fields
+validations name-3 pwd-6
+same mail id while signing up
+forget pwd
+add cart
+clear cart
++,-
+add more
+payment=> clear cart
+remove
+logout
+disable back button
+adminlogin 
+fooditems-> add, edit,delete
+=> delete in db ,fooditems, orderonline
+add item back to same page=> added in both db, orderonline
+edit=>edited in both db, orders,orderonlinethen back to food items
+users => data of users
+orders=>
+cart if payment successful , order details will be added to orders page
+logout

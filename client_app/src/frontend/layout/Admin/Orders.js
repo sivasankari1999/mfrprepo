@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"
+import AdminHome1 from "./AdminHome1";
 export default function Orders() {
-    const [cart, setCart] = useState([]);
-    const [cartLen, setCartLen] = useState(0);
-    const getCart = async () => {
-        const cart = await axios.get("http://localhost:5000/cart");
-        setCart(cart.data.cartList);
-        setCartLen(cart.data.cartList.length);
+    const [orderList, setOrderList] = useState([]);
+    const getOrders = async () => {
+        const orderList = await axios.get("http://localhost:5000/admin/orders");
+        console.log(orderList.data);
+        setOrderList(orderList.data.data);
     };
     useEffect(() => {
-        getCart();
+        getOrders();
     }, []);
     return (
         <>
+        <AdminHome1/>
             <div className="w3-container">
 
                 <div className="container" id="FoodItems">
@@ -20,25 +21,14 @@ export default function Orders() {
                         <table className='table mt-2'>
                             <thead>
                                 <tr>
-                                    <th ></th>
                                     <th >Product</th>
                                     <th >Price</th>
                                     <th >Quantity</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {cart.map((food, ind) => (
+                                {orderList.map((food, ind) => (
                                     <tr key={ind}>
-                                        <th>
-                                            <img
-                                                style={{
-                                                    maxWidth: '110px',
-                                                }}
-                                                src={require(`../../../assets/img/${food.image_path}`)}
-                                                className="-imgcard-top1"
-                                                alt="Card image cap"
-                                            />
-                                        </th>
                                         <td>
                                             {food.name}
                                         </td>

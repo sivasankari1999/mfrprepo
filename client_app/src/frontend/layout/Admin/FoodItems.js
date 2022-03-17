@@ -1,23 +1,47 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import axios from "axios";
 import "./Adminhome.css"
+import AdminHome1 from "./AdminHome1";
 export default function FoodItems() {
     let [fooditems, setfooditems] = useState([]);
-
+    let [currentFoodItem,setCurrentFoodItem]= useState([]);
+    let navigate = useNavigate();
     const getFoodItems = async () => {
-        const fooditems = await axios.get("http://localhost:5000/FoodItems");
-        //console.log(fooditems);
-        setfooditems(fooditems.data.foodList);
-    };
-    useEffect(() => {
+        const fooditems = await axios.get("http://localhost:5000/OrderOnline");
+        // let [fooditems, setfooditems] = useState([]);
+        setfooditems (fooditems.data.foodList);
+      };
+      useEffect(() => {
         getFoodItems();
-    }, []);
-    return (
-        <>
-            <div className="w3-container">
+      }, []);
+   const removeFromFoodItems = (foodToRemove)=>{
+    const url = "http://localhost:5000/deletefood/OrderOnline";
+    axios
+      .post(url, foodToRemove)
+      .then((res) => {
+        console.log("res.data: ", res.data);
+        alert(res.data.message)
+        getFoodItems();
+      })
+      .catch((err) => {
+        console.log(err.response);})
+   }
+// const editFoodItem =(foodTobeEdited)=>{
+// setCurrentFoodItem(foodTobeEdited);
+// navigate({
+//  pathname: "/editItem", 
+//  currentFoodItem: currentFoodItem 
+// })
 
-                <div className="container" id="FoodItems">
+ //},
+ 
+    return (
+        <> <AdminHome1/>
+            <div className="w3-container">
+                   <button className="addItemAdmin mt-2 btn"
+               onClick={() => navigate("/addItem")}>Add Item</button>
+                <div className="container mt-5" id="FoodItems">
 
                     {fooditems.map((food, ind) => {
                         return (
@@ -35,13 +59,14 @@ export default function FoodItems() {
                                         <div className="adminbtns">
                                             <button
                                                 className="btn adminedit mt-4"
-
-                                            >
+                                                onClick={() =>
+                                                navigate('/editItem', {state:{food }})}
+                                                >
                                                 Edit
                                             </button>
                                             <button
                                                 className="btn admindelete mt-4"
-
+                                                onClick={() => removeFromFoodItems(food)}
                                             >
                                                 Delete
                                             </button>

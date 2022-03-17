@@ -1,10 +1,9 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
+import { Nav} from "react-bootstrap";
 import { Link } from "react-router-dom";
-
 import Footer from "../Footer";
-import Layout from "../Layout";
 import Navbar from "../Navbar";
+
 //import AliceCarousel from 'react-alice-carousel';
 import Slider from "./components/Slider/Slider";
 import "./Home.css";

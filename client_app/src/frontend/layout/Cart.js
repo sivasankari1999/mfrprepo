@@ -36,7 +36,7 @@ export default function Cart() {
    
   };
 
-  const addQuantity = (food, itemCount) => {
+  const addQuantity = (food) => {
     const url = "http://localhost:5000/addquantity/cart";
     let quantity = parseInt(food.quantity) + 1
     axios
@@ -48,9 +48,9 @@ export default function Cart() {
       .catch((err) => {
         console.log(err.response);})
   };
-  const subQuantity = (food, itemCount) => {
+  const subQuantity = (food) => {
     const url = "http://localhost:5000/subquantity/cart";
-    let quantity = parseInt(food.quantity) - 1
+    let quantity = (parseInt(food.quantity)- 1,1)
     axios
       .put(url, {food,quantity})
       .then((res) => {
@@ -86,6 +86,15 @@ export default function Cart() {
 					const { data } = await axios.post(verifyUrl, response);
 					console.log(data);
           alert(data.message);
+          const url = "http://localhost:5000/admin/orders";
+        axios
+            .post(url, cart)
+            .then((res) => {
+                console.log("res.data: ", res.data);
+            })
+            .catch((err) => {
+                console.log(err.response);
+            });
           if(data.message){
             clearCart();
           }
@@ -159,9 +168,8 @@ export default function Cart() {
                     <td>
                       <button className="addbutton btn mx-2"
                         onClick={() => {
-                          setQuantity(Math.max(parseInt(food.quantity) - 1, 1));
+                          setQuantity(Math.max((parseInt(food.quantity)- 1), 0));
                           subQuantity(food, parseInt(food.quantity) - 1)
-                          // setItemCount(Math.max(itemCount - 1, 1));
                         }}
                       >-</button>
                       {food.quantity}
@@ -169,8 +177,6 @@ export default function Cart() {
                         onClick={() => {
                           setQuantity(parseInt(food.quantity) + 1);
                           addQuantity(food, parseInt(food.quantity) + 1)
-                          //setItemCount(itemCount + 1);
-
                         }}
                       >+
                       </button></span>
