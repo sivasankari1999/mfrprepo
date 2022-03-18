@@ -132,3 +132,11 @@ body {
     color: white;
     width: 120px;
   }
+  @media (max-width:480px){
+  }
+  @media (min-width: 481px) and (max-width:760px){
+  }
+  @media (min-width: 761px) and (max-width:1279px){
+  }
+  @media (min-width:1024px) and (max-width:1024px){
+  }

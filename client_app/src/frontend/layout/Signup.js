@@ -1,4 +1,4 @@
-import "./Signup.css";
+import "./LoginSignup.css";
 import { useNavigate } from "react-router";
 import Header from "./Header";
 import { Link } from "react-router-dom";
@@ -80,21 +80,20 @@ function Signup(props) {
       <Header></Header>
       <div className="backdrop" onClick={() => navigate("/")}></div>
 
-      <div className="login-card" style={{ width: "22rem" }}>
-        <div className="login-header mb-3">
+      <div className="login-card" >
+        <div className="login-header">
           <h3>Sign up</h3>
           <span onClick={() => navigate("/")}>&#10005;</span>
         </div>
         <form onSubmit={signupSubmitHandler}>
           <div>
             <input
-              className="mt-3"
+              className="input-field mt-3"
               type="text"
               placeholder="FullName"
               value={data.FullName}
               name="FullName"
               onChange={changeHandler}
-              style={{ width: "18rem", height: "2.5rem" }}
             ></input>
             <div className="text-danger signup_err">
               <p className="m-0">{fullNameErr}</p>
@@ -102,13 +101,12 @@ function Signup(props) {
           </div>
           <div>
             <input
-              className="mt-3"
+              className="input-field mt-3"
               type="email"
               name="email"
               value={data.email}
               onChange={changeHandler}
               placeholder="Email Address"
-              style={{ width: "18rem", height: "2.5rem" }}
             ></input>
             <div className="text-danger signup_err">
               <p className="m-0 ">{emailErr}</p>
@@ -116,13 +114,12 @@ function Signup(props) {
           </div>
           <div>
             <input
-              className="mt-3"
+              className="input-field mt-3"
               type="password"
               name="password"
               value={data.password}
               onChange={changeHandler}
               placeholder="Password"
-              style={{ width: "18rem", height: "2.5rem" }}
             ></input>
             <div className="text-danger signup_err">
               <p className="m-0 ">{passwordErr}</p>

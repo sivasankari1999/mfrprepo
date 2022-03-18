@@ -86,6 +86,15 @@ export default function Cart() {
 					const { data } = await axios.post(verifyUrl, response);
 					console.log(data);
           alert(data.message);
+          const url1 = "http://localhost:5000/myOrders";
+          axios
+              .post(url1, cart)
+              .then((res) => {
+                  console.log("res.data: ", res.data);
+              })
+              .catch((err) => {
+                  console.log(err.response);
+              });
           const url = "http://localhost:5000/admin/orders";
         axios
             .post(url, cart)
@@ -101,7 +110,7 @@ export default function Cart() {
 				} catch (error) {
 					console.log(error);
 				}
-			},
+      },
 			theme: {
 				color: "#8a2b06",
 			},
@@ -136,44 +145,41 @@ export default function Cart() {
         
 
           <div className="fooditems ">
-            <table className='table mt-2'>
-              <thead>
+            <table className='cart_table mt-2'>
+              <thead id="cart_thead">
                 <tr>
-                  <th ></th>
-                  <th >Product</th>
-                  <th >Price</th>
-                  <th >Quantity</th>
-                  <th >Remove</th>
+                  <th className="cart_th" ></th>
+                  <th className="cart_th">Product</th>
+                  <th className="cart_th">Price</th>
+                  <th className="cart_th">Quantity</th>
+                  <th className="cart_th">Remove</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="cart_tbody">
                 {cart.map((food, ind) => (
-                  <tr key={ind}>
-                    <th>
+                  <tr className="cart_row" key={ind}>
+                    <td className="cart_cell">
                       <img
-                        style={{
-                          maxWidth: '110px',
-                        }}
                         src={require(`../../assets/img/${food.image_path}`)}
-                        className="-imgcard-top1"
+                        className="imgcard-top1"
                         alt="Card image cap"
                       />
-                    </th>
-                    <td>
+                    </td>
+                    <td className="cart_cell">
                       {food.name}
                     </td>
-                    <td>
+                    <td className="cart_cell">
                       ₹{parseInt(food.price) * parseInt(food.quantity)}
                     </td>
-                    <td>
-                      <button className="addbutton btn mx-2"
+                    <td className="cart_cell">
+                      <button className="addbutton btn"
                         onClick={() => {
                           setQuantity(Math.max((parseInt(food.quantity)- 1), 0));
                           subQuantity(food, parseInt(food.quantity) - 1)
                         }}
                       >-</button>
                       {food.quantity}
-                      <span><button className="addbutton btn mx-2"
+                      <span><button className="addbutton btn"
                         onClick={() => {
                           setQuantity(parseInt(food.quantity) + 1);
                           addQuantity(food, parseInt(food.quantity) + 1)
@@ -182,7 +188,7 @@ export default function Cart() {
                       </button></span>
 
                     </td>
-                    <td>
+                    <td className="cart_cell">
 
                       <button
                         className="removefromcart-btn btn"
@@ -199,15 +205,15 @@ export default function Cart() {
           <div className="totalsum">
             <h5>Total Cost: ₹{getTotalSum()}</h5>
           </div>
-          <div className="mt-5">
+          <div >
             <div className="cartbtns">
               <div className="addMorebtn  ">
-                <button className="btn  addmore1"
+                <button className="btn  addmore_btn"
                   onClick={() => navigate("/OrderOnline")}><span>&#8592;</span> Add More </button>
               </div>
 
-              <div className="  placeorderbtn">
-                <button className="btn btn-success"
+              <div>
+                <button className="btn btn-success  placeorderbtn"
                  onClick={handlePayment}>Proceed to Pay</button>
               </div>
             </div>

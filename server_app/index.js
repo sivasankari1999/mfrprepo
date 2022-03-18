@@ -27,6 +27,7 @@ const { User } = require("./models/users");
 const { FoodItems } = require("./models/FoodItems");
 const { Cart } = require("./models/cart");
 const { Orders } = require("./models/Orders");
+const {MyOrders} = require("./models/myorders");
 const { log } = require("console");
 const connection_string = process.env.CONNECTION_STRING;
 let AdminUsermail = "AdminCurry@gmail.com";
@@ -212,6 +213,26 @@ app.get("/OrderOnline", async (req, res) => {
   console.log("foodlist:", foodList);
   res.send({ foodList });
 });
+// app.get("/myOrders", async (req, res) => {
+//   const { body } = req;
+//   console.log("body:", body);
+//   const MyOrdersList = await MyOrders.find({userId:req.user._id}, { _id: 0 });
+//   console.log("MyOrdersList:", MyOrdersList);
+//   res.send({ MyOrdersList });
+
+// });
+// app.post('/myOrders',async(req,res)=>{
+//   const item = await MyOrders.findOne({FoodItemsId:req.body._id});
+//      const newItem = new MyOrders({
+//          name:req.body.name,
+//          price:req.body.price,
+//          userId:req.user._id,
+//          FoodItems:req.body._id
+//      })
+//      const MyOrdersListItem = await newItem.save();
+//      console.log("MyOrdersListItem:",MyOrdersListItem);
+//      res.send(MyOrdersListItem)
+//  })
 app.get("/users", async (req, res) => {
   const { body } = req;
   console.log("body:", body);

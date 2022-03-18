@@ -68,32 +68,30 @@ function Login() {
       <Header></Header>
       <div className="backdrop" onClick={() => navigate("/")}></div>
 
-      <div className="login-card" style={{ width: "22rem" }}>
-        <div className="login-header mb-3">
+      <div className="login-card" >
+        <div className="login-header ">
           <h3>Log in</h3>
           <span onClick={() => navigate("/")}>&#10005;</span>
         </div>
         <form onSubmit={loginSubmitHandler}>
           <div>
             <input
-              className="m-3"
+              className="input-field m-3"
               type="email"
               name="email"
               value={data.email}
               onChange={changeHandler}
               placeholder="Email Address"
-              style={{ width: "18rem", height: "2.5rem" }}
             ></input>
           </div>
           <div>
             <input
-              className="m-3"
+              className="input-field m-3"
               type="password"
               name="password"
               value={data.password}
               onChange={changeHandler}
               placeholder="Password"
-              style={{ width: "18rem", height: "2.5rem" }}
             ></input>
           </div>
           <div className="text-danger">

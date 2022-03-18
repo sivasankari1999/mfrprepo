@@ -32,7 +32,7 @@
   color: #8a2b06;
   font-weight: bolder;
 }
-.table {
+.cart_table {
    width: 1100px; 
   height: auto;
   /* margin-top: 15px; */
@@ -42,7 +42,7 @@
   margin-left: 25px;
 }
 
-thead,th {
+#cart_thead,.cart_th {
   font-size: 25px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #8a2b06;
@@ -51,7 +51,7 @@ thead,th {
   justify-content: center;
   /* border: 2px solid #8a2b06; */
 }
-tbody,tr,td {
+#cart_tbody,.cart_row,.cart_cell{
   padding: 2px 3px;
   border-collapse: collapse;
   font-size: 20px;
@@ -63,6 +63,8 @@ tbody,tr,td {
 .addbutton{
   background-color: #8a2b06;
   color: white;
+  margin-left: 20px;
+  margin-right: 20px;
   width: 30px;
   height: 30px;
   margin-top: 5px;
@@ -80,6 +82,8 @@ tbody,tr,td {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+margin-top: 100px;
  
 }
 .addMorebtn{
@@ -90,6 +94,303 @@ tbody,tr,td {
 .placeorderbtn{
   margin-right: 200px;
 }
-.addmore1{
+.addmore_btn{
   color: white;
+}
+.imgcard-top1{
+  width:150px;
+}
+@media (min-width:319px) and (max-width:480px){
+  .Carthead {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 5px;
+    background-color: #8a2b06;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    
+  }
+  .imgcard-top1{
+    width:50px;
+  }
+  .removefromcart-btn {
+    background-color: white;
+    color: #8a2b06;
+    font-size: 12px;
+  }
+  .cart_table  {
+  width:100%; 
+
+    height: auto;
+    /* margin-top: 15px; */
+    background-color: white;
+    /* border: 2px solid #8a2b06; */
+    border-collapse: collapse;
+    margin-left: 30px;
+  }
+  
+  #cart_thead,.cart_th{
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #8a2b06;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    /* justify-content: center; */
+    /* border: 2px solid #8a2b06; */
+  }
+   #cart_tbody,.cart_row,.cart_cell {
+    padding: 2px 3px;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: center;
+    /* border-bottom: 3px; */
+    color: #8a2b06;
+    /* border: 2px solid #8a2b06; */
+  }
+  .addbutton{
+    background-color: #8a2b06;
+    color: white;
+    width: 20px;
+    height: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 5px;
+    padding-left: 9px !important;
+    padding-top: 0 !important;
+    font-size: 12px;
+  }
+  .totalsum{
+    float: right;
+    margin-right: 50px;
+    font-family: cursive;
+    color:#8a2b06;
+    margin-top: 40px;
+  }
+  .cartbtns{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column-reverse;
+    
+  }
+  .addMorebtn{
+     margin-left: 100px; 
+    background-color: #8a2b06;
+    margin-right: 100px;
+    margin-top: 10px;
+  }
+  .placeorderbtn{
+    margin-left: 160px; 
+    margin-top: 60px;
+    margin-right: 150px;
+  }
+  .addmore_btn{
+    color: white;
+  }
+}
+@media (min-width: 481px) and (max-width:760px){
+}
+@media (min-width: 761px) and (max-width:1279px){
+  .Carthead {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 5px;
+    background-color: #8a2b06;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    
+  }
+  .imgcard-top1{
+    width:150px;
+  }
+  .fooditems {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    gap: 2em 2em;
+    margin: auto;
+    margin-top: 45px;
+  }
+  
+  .removefromcart-btn {
+    background-color: white;
+    color: #8a2b06;
+    font-weight: bolder;
+  }
+  .cart_table  {
+     width:650px; 
+    height: auto;
+    /* margin-top: 15px; */
+    background-color: white;
+    /* border: 2px solid #8a2b06; */
+    border-collapse: collapse;
+    margin-left: 25px;
+  }
+  
+  thead,th {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #8a2b06;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    justify-content: center;
+    /* border: 2px solid #8a2b06; */
+  }
+  tbody,tr,td {
+    padding: 2px 3px;
+    border-collapse: collapse;
+    font-size: 20px;
+    text-align: center;
+    /* border-bottom: 3px; */
+    color: #8a2b06;
+    /* border: 2px solid #8a2b06; */
+  }
+  .addbutton{
+    background-color: #8a2b06;
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 7px !important;
+    padding-top: 0 !important;
+    font-size: 18px;
+  }
+  .totalsum{
+    float: right;
+    margin-right: 150px;
+    font-family: cursive;
+    color:#8a2b06;
+  }
+  .cartbtns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+  }
+  .addMorebtn{
+    margin-left: 100px;
+    background-color: #8a2b06;
+    
+  }
+  .placeorderbtn{
+    margin-right: 200px;
+  }
+  .addmore1{
+    color: white;
+  }
+}
+@media (min-width:1024px) and (max-width:1024px){
+  .Carthead {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 5px;
+    background-color: #8a2b06;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    
+  }
+  
+  .fooditems {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    gap: 2em 2em;
+    margin: auto;
+    margin-top: 45px;
+  }
+  
+  .removefromcart-btn {
+    background-color: white;
+    color: #8a2b06;
+    font-weight: bolder;
+  }
+  .cart_table {
+     width: 1100px; 
+    height: auto;
+    /* margin-top: 15px; */
+    background-color: white;
+    /* border: 2px solid #8a2b06; */
+    border-collapse: collapse;
+    margin-left: 25px;
+  }
+  
+  thead,th {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #8a2b06;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    justify-content: center;
+    /* border: 2px solid #8a2b06; */
+  }
+  tbody,tr,td {
+    padding: 2px 3px;
+    border-collapse: collapse;
+    font-size: 20px;
+    text-align: center;
+    /* border-bottom: 3px; */
+    color: #8a2b06;
+    /* border: 2px solid #8a2b06; */
+  }
+  .addbutton{
+    background-color: #8a2b06;
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 7px !important;
+    padding-top: 0 !important;
+    font-size: 18px;
+  }
+  .totalsum{
+    float: right;
+    margin-right: 150px;
+    font-family: cursive;
+    color:#8a2b06;
+  }
+  .cartbtns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+  }
+  .addMorebtn{
+    margin-left: 100px;
+    background-color: #8a2b06;
+    
+  }
+  .placeorderbtn{
+    margin-right: 200px;
+  }
+  .addmore1{
+    color: white;
+  }
 }

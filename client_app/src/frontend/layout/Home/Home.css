@@ -7,8 +7,82 @@ h3 {
   padding: 5px 5px;
   word-spacing: 2px;
 }
+
 .img1 {
   width: 80px;
   height: 80px;
   margin-right: 110px;
+}
+@media (max-width:480px){
+  h3 {
+    font-family: cursive; 
+    color: brown;
+  }
+  .cheftitle{
+    margin-left:85px;
+  }
+  .seasonal{
+    margin-left:25px;
+  }
+  .bestdelivery{
+    margin-left:25px;
+  }
+  .content {
+    font-family: cursive; 
+    padding: 5px 5px;
+    word-spacing: 2px;
+  }
+  .img1 {
+    width: 80px;
+    height: 60px;
+    margin-right: 110px;
+  }
+}
+@media (min-width: 481px) and (max-width:760px){
+  h3 {
+    font-family: cursive; 
+    color: brown;
+  }
+  .content {
+    font-family: cursive; 
+    padding: 5px 5px;
+    word-spacing: 2px;
+  }
+  .img1 {
+    width: 80px;
+    height: 80px;
+    margin-right: 90px;
+  }
+}
+@media (min-width: 761px) and (max-width:1279px){
+  h3 {
+    font-family: cursive; 
+    color: brown;
+  }
+  .content {
+    font-family: cursive; 
+    padding: 5px 5px;
+    word-spacing: 2px;
+  }
+  .img1 {
+    width: 80px;
+    height: 80px;
+    margin-right: 110px;
+  }
+}
+@media (min-width:1024px) and (max-width:1024px){
+  h3 {
+    font-family: cursive; 
+    color: brown;
+  }
+  .content {
+    font-family: cursive; 
+    padding: 5px 5px;
+    word-spacing: 2px;
+  }
+  .img1 {
+    width: 80px;
+    height: 80px;
+    margin-right: 110px;
+  }
 }

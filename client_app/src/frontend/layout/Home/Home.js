@@ -15,8 +15,8 @@ export default function Home() {
       <div>
         <Slider />
         <div className=" py-4 row">
-          <div className="card2 py-2  col-6 px-2">
-            <h3 className="mt-2 mx-3" >
+          <div className="card2 py-2  col-sm-12 col-md-12 col-xs-12 col-lg-6 px-2">
+            <h3 className="mt-2 cheftitle" >
               Our Chef{" "}
               <span>
                 {" "}
@@ -35,8 +35,8 @@ export default function Home() {
               experience with us.
             </h5>
           </div>
-          <div className="card2 py-2 col-6 px-2">
-            <h3>
+          <div className="card2 py-2 col-sm-12 col-md-12 col-xs-12 col-lg-6 px-2">
+            <h3 className="seasonal">
               Seasonal and Local{" "}
               <span>
                 {" "}
@@ -58,7 +58,7 @@ export default function Home() {
         </div>
 
         <div className="pt-3 pb-5 align-items-centre justify-content-center">
-          <h3>
+          <h3 className="bestdelivery">
             The Best Delivery{" "}
             <span>
               {" "}

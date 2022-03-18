@@ -38,7 +38,7 @@ function Navbar() {
                     </li>
                     <li>
                     
-                    <Link  to="/logout">
+                    <Link  to="/logout" className="logout">
                         Log Out
                     </Link>
                     </li>

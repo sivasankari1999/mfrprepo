@@ -43,7 +43,7 @@ export default function OrderOnline({ cartLength }) {
         <Navbar />
         <div className="filter_cart">
           <div>
-            <h6 style={{ color: " #8a2b06" }} className="my-3 m-0">
+            <h6 style={{ color: " #8a2b06" }} className="category">
               Select a Category of Food!!!
             </h6>
             <select
@@ -76,17 +76,23 @@ export default function OrderOnline({ cartLength }) {
               </option>
             </select>
           </div>
+          
           <span>
-            <Link to="/cart" className="cartpage">
+            <Link to="/cart" className="cartpage_orderonline">
               Cart ({cartLength})
               <span>
                 {" "}
                 <img
                   src={require("../../assets/img/cart.jfif")}
                   alt=""
-                  className="img1"
+                  className="cart_img1"
                 />
               </span>
+              <span className="px-2">
+            <Link to="/myOrders" className="orderspage">
+              My Orders
+            </Link>
+          </span>
             </Link>
           </span>
         </div>

@@ -22,6 +22,7 @@ import AddItemForm from './Admin/AddItemForm';
 import EditItemForm from './Admin/EditItemForm';
 import Forgotpassword from './Forgotpassword';
 import Resetpassword from './ResetPassword';
+import MyOrders from './MyOrders';
 
 function Layout() {
   const [cart, setCart] = useState([]);
@@ -41,11 +42,12 @@ function Layout() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/forgotpassword" element={<Forgotpassword />}></Route>
-        <Route path="http://localhost:3000/reset/:token" element={<Resetpassword />}></Route>
+        <Route path="/reset/:token" element={<Resetpassword />}></Route>
 
         <Route path="/home" element={<Home />}></Route>
         <Route path="/Menu" element={<Menu />}></Route>
         <Route path="/OrderOnline" element={<OrderOnline cartLength={cartLen} />}></Route>
+        <Route path="/myOrders" element={<MyOrders />}></Route>
         <Route path="/shippingdetails" element={<ShippingDetails />}></Route>
         <Route path="/Admin" element={<AdminHome1 />}></Route>
         <Route path="/fooditems" element={<FoodItems />}></Route>

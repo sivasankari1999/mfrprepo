@@ -7,8 +7,8 @@ export default function Menu() {
     return (
         <>
         <Navbar/>
-        <div>
-           <img src={require("../../assets/img/menu.jpg")} alt=""/>
+        <div className="container-menu">
+           <img src={require("../../assets/img/menu.jpg")}alt="" id="img1"  />
             <br/>
             <br/>
             <br/>
@@ -22,7 +22,7 @@ export default function Menu() {
 
             <div className="card2">
                 <div className="row ">
-                <div className="col-6 px-1 py-1">
+                <div className="col-sm-12 col-md-6 col-xs-12 col-lg-6 px-1 py-1">
                 <h3>STARTERS</h3>
                     <li><b>Vegetable Somasa </b>- Crisp Pastry filled with Potato, 
                         peas,<br/>spices and deep fried (2pcs) I 6</li>
@@ -34,7 +34,7 @@ export default function Menu() {
                                    spices tossed with garlic chili sauce. I 9</li>
                 </div>
 
-                <div className="col-6 px-1 py-1">
+                <div className="col-sm-12 col-md-6 col-xs-12 col-lg-6 px-1 py-1">
                     <h3>CURRIES</h3>
                         <li><b>Famous Tikka Masala</b> (cooked with tomato onion based <br/>
                                  cream sauce). Most popular.</li>
@@ -43,7 +43,7 @@ export default function Menu() {
                         <li><b>Saag </b>(spinach cooked with cream, freshly ground spices, garlic,<br/>ginger, onion and tomato
                         </li>
                 </div>
-                <div className="col-6 px-1 py-1">
+                <div className="col-sm-12 col-md-6 col-xs-12 col-lg-6 px-1 py-1">
                 <h3>Biryanis</h3> 
                 <p>Basmati Rice cooked with curry spiced<br/>sauce with saffron and vegetables. 
                                      Served with raita. <br/><b>Vegetables, Paneer, Chicken (+1), Lamb (+3), 
@@ -52,7 +52,7 @@ export default function Menu() {
                 </div>
 
                 
-                <div className="col-6 px-1 py-1">
+                <div className="col-sm-12 col-md-6 col-xs-12 col-lg-6 px-1 py-1">
                 <h3>Vegetarian Specialities</h3>
                     <li><b>Vegetable Korma</b> (Mixed vegetables with cream, coconut,<br/>Nuts and raisins) Vegan15.</li>
                     <li><b>Plain Saag </b>(Spinach Cooked with cream sauce)</li>
@@ -60,7 +60,7 @@ export default function Menu() {
                     <li><b>Paneer masala</b> (House made Cheese with Cream sauce)</li>
                 </div>
 
-                <div className="col-6 px-1 py-1">
+                <div className="col-sm-12 col-md-6 col-xs-12 col-lg-6 px-1 py-1">
                 <h3>Soup and Salad(Single / Family) </h3>
                 <li>Daal Mushroom soup /Tomato Coconut soup - Vegan5/12</li>
                 <li>Mulligatawny Soup (Chicken and lentil) - 6/14</li>
@@ -69,7 +69,7 @@ export default function Menu() {
                 
                 <br/>
 
-                <div className="col-6 px-1 py-1">
+                <div className="col-sm-12 col-md-6 col-xs-12 col-lg-6 px-1 py-1">
                     <h3>Indian Sweets</h3>
                     <li>Kheer (Rice Pudding)</li>
                     <li>Gulab Jamun (Milk Balls in Rose water)*</li>
@@ -78,7 +78,7 @@ export default function Menu() {
                 </div>
 
 
-                <div className="col-6 px-1 py-1">
+                <div className="col-sm-12 col-md-6 col-xs-12 col-lg-6 px-1 py-1">
                     <h3>Soft drinks</h3>
                     <li>Masala Chai Tea (Hot or Iced) </li>
                     <li>Black and Herbal Tea </li>

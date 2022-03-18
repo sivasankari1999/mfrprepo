@@ -1,4 +1,4 @@
-.card{
+.card2{
     text-align: left;
     padding-left:20px;
     padding-top: 20px;
@@ -8,6 +8,55 @@
     list-style-type: none;
 }
 
+
 .col-6 ul li{
    list-style-type: none;
+}
+@media (min-width:319px) and  (max-width:480px){
+    .container-menu{
+        width: 300px;
+        height: auto;
+    }
+    #img1{
+        width: 200px;
+        height: 200px;
+    }
+    .card2{
+        text-align: left;
+        padding-left:20px;
+        padding-top: 20px;
+        list-style-type: none;
+    }
+}
+@media (min-width: 481px) and (max-width:760px){
+}
+@media (min-width: 761px) and (max-width:1279px){
+    .card{
+        text-align: left;
+        padding-left:20px;
+        padding-top: 20px;
+        list-style-type: none;
+    }
+    .row{
+        list-style-type: none;
+    }
+    
+    .col-6 ul li{
+       list-style-type: none;
+    }
+}
+@media (min-width:1024px) and (max-width:1024px){
+    .card{
+        text-align: left;
+        padding-left:20px;
+        padding-top: 20px;
+        list-style-type: none;
+    }
+    .row{
+        list-style-type: none;
+    }
+    
+    .col-6 ul li{
+       list-style-type: none;
+    }
 }
