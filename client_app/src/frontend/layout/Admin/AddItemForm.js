@@ -41,7 +41,7 @@ export default function AddItemForm() {
         <>
             <AdminHome1 />
             <div>
-                <div className="w3-container" style={{ width: "800px", marginLeft: "360px" }}>
+                <div className="w3-container"  id="additem">
                     <h3>Add Food Items</h3>
                     <form onSubmit={createFoodItem}>
                         <div>

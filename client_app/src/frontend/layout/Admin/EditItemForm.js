@@ -45,7 +45,7 @@ export default function EditItemForm(props) {
         <>
             <AdminHome1 />
             <div>
-                <div className="w3-container" style={{ width: "800px", marginLeft: "360px" }}>
+                <div className="w3-container" id="edititem" >
                     <h3>Add Food Items</h3>
                     <form onSubmit={updateFoodList}>
                         <div>

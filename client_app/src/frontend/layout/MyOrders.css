@@ -1,0 +1,110 @@
+.container_myorders {
+margin-top: 20px;
+margin-left: 100px;
+margin-right: 100px;
+}
+ .table{
+    width: 1000px;
+    height: auto;
+    background-color: white;
+    border-collapse: collapse;
+    margin-left: 35px;
+    margin-right: 80px;
+}/*
+thead.th_myorders {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #8a2b06;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    justify-content: center;
+    /* border: 2px solid #8a2b06; */
+  /* } */
+  /* .tbody_myorders,.tr_myorders,.td_myorders {
+    padding: 2px 3px;
+    border-collapse: collapse;
+    font-size: 20px;
+    text-align: center; */
+    /* border-bottom: 3px; */
+    /* color: #8a2b06; */
+    /* border: 2px solid #8a2b06; */
+  /* } */
+@media(min-width:319px) and  (max-width:480px){
+    .container_myorders {
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        }
+        .table{
+            width: 200px;
+    height: auto;
+    background-color: white;
+    border-collapse: collapse;
+    margin-left: 25px;
+    margin-right: 20px;
+        }
+        thead,th{
+            font-size: 17px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #8a2b06;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            justify-content: center;
+            /* border: 2px solid #8a2b06; */
+        } 
+        tbody,tr,td {
+            padding: 6px 5px;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: center; 
+            /* border-bottom: 3px; */
+            /* color: #8a2b06; */
+            /* border: 2px solid #8a2b06; */
+        }
+}
+@media (min-width: 481px) and (max-width:760px){
+    .container_myorders {
+        margin-top: 20px;
+        margin-left: 80px;
+        margin-right: 120px;
+        }
+        .table{
+            width: 600px;
+    height: auto;
+    background-color: white;
+    border-collapse: collapse;
+    margin-left: 5px;
+    margin-right: 50px;
+        }
+        
+}
+@media (min-width: 761px) and (max-width:1279px){
+    .container_myorders {
+        margin-top: 20px;
+        margin-left: 80px;
+        margin-right: 120px;
+        }
+        .table{
+            width: 600px;
+    height: auto;
+    background-color: white;
+    border-collapse: collapse;
+    margin-left: 5px;
+    margin-right: 50px;
+        }
+}
+@media (min-width:1024px) and (max-width:1024px){
+    .container_myorders {
+        margin-top: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+        }
+        .table{
+            width: 750px;
+    height: auto;
+    background-color: white;
+    border-collapse: collapse;
+    margin-left: 5px;
+    margin-right: 100px;
+        }
+}

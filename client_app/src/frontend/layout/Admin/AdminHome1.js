@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function AdminHome1() {
     return (
         <>
-            <div className="w3-sidebar  w3-bar-block" style={{ width: "200px", backgroundColor: "#8a2b06", color: "white" }}>
+            <div className="w3-sidebar  w3-bar-block" id="sidebar_admin">
                 <h3 className="w3-bar-item" style={{color:"white"}} >Admin</h3>
                 <div className="mt-5" style={{ fontSize: "20px" }}>
                 <Link to="/fooditems" className="w3-bar-item w3-button" style={{ color: "white" }}>FoodItems</Link>

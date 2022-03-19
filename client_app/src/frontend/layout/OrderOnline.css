@@ -257,12 +257,12 @@
     /* margin: auto 0px;  */
    /* overflow: hidden; */
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr;
    justify-content: space-evenly;
-   gap: 2em 2em;
-   /* margin-left: 20px;
-     margin-right: 20px; */
-   margin: auto; 
+   gap: 1em 1em;
+    /* margin-left: 40px; */
+   /*  margin-right: 20px; */
+   /* margin: auto;  */
    /* background-color: #8a2b06; */
  }
  .card_container {

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import "./MyOrders.css"
 export default function MyOrders() {
 const [myOrders, setMyOrders] = useState([]);
 const getMyOrders = async () => {
@@ -15,8 +16,8 @@ const getMyOrders = async () => {
     return (
         <>
         <Navbar/>
-            <div className="container_myorders mt-2 mx-5" id="FoodItems">
-                <div className="fooditems ">
+            <div className="container_myorders" id="FoodItems">
+                <div className="fooditems_myOrders ">
                     <table className='table'>
                         <thead>
                             <tr>
