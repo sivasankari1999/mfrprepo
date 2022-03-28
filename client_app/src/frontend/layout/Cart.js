@@ -3,6 +3,9 @@ import { useNavigate } from "react-router";
 import "./Cart.css";
 import axios from "axios";
 import OrderOnline from "./OrderOnline";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+toast.configure();
 export default function Cart() {
   let TOTAL_SUM = "TOTAL_SUM";
   const [cart, setCart] = useState([]);
@@ -85,7 +88,11 @@ export default function Cart() {
 					const verifyUrl = "http://localhost:5000/verify";
 					const { data } = await axios.post(verifyUrl, response);
 					console.log(data);
-          alert(data.message);
+          // alert(data.message);
+          toast.success(data.message , {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose:1000
+          });
           const url1 = "http://localhost:5000/myOrders";
           axios
               .post(url1, cart)
@@ -218,6 +225,21 @@ export default function Cart() {
               </div>
             </div>
           </div>
+        </div>
+
+      }
+      {cart.length==0 && 
+        <div className="py-5">
+          <h1 className="cartempty">Your Cart is empty</h1>
+          <img
+                  src={require("../../assets/img/cart1.jpg")}
+                  alt=""
+                  className="cart_img2"
+                />
+            <br/>
+            <br/>
+          <button className="btn  emptybtn"
+                  onClick={() => navigate("/OrderOnline")}><span>&#8592;</span>Explore More</button>
         </div>
 
       }

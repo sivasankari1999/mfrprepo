@@ -16,7 +16,7 @@ function Forgotpassword() {
   const [successMsg, setSuccessMsg] = useState("");
 
   const resetLinkHandler = (e) => {
-    alert("Clicked");
+    // alert("Clicked");
     e.preventDefault();
     console.log("email: ", email);
     const url = "http://localhost:5000/reset-link";

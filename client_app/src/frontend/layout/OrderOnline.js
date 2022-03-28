@@ -4,6 +4,9 @@ import "./OrderOnline.css";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+toast.configure();
 //import { Navbar } from "react-bootstrap";
 export default function OrderOnline({ cartLength }) {
   let Starters = "Starters";
@@ -30,11 +33,19 @@ export default function OrderOnline({ cartLength }) {
       .post(url, food)
       .then((res) => {
         console.log("res.data: ", res.data);
-        alert(res.data.message)
+        // alert(res.data.message)
+        toast.success(res.data.message , {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose:1000
+        });
       })
       .catch((err) => {
         console.log(err.response);
-        alert(err.response.data.message)
+        // alert(err.response.data.message)
+        toast.error(err.response.data.message, {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 1000,
+        });
       });
   };
   return (

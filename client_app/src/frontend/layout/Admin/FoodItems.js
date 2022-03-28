@@ -3,6 +3,9 @@ import { Link ,useNavigate} from "react-router-dom";
 import axios from "axios";
 import "./Adminhome.css"
 import AdminHome1 from "./AdminHome1";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+toast.configure();
 export default function FoodItems() {
     let [fooditems, setfooditems] = useState([]);
     let [currentFoodItem,setCurrentFoodItem]= useState([]);
@@ -21,7 +24,11 @@ export default function FoodItems() {
       .post(url, foodToRemove)
       .then((res) => {
         console.log("res.data: ", res.data);
-        alert(res.data.message)
+        // alert(res.data.message)
+        toast.success(res.data.message , {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose:1000
+          });
         getFoodItems();
       })
       .catch((err) => {

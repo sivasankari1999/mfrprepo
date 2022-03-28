@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import AdminHome1 from "./AdminHome1";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+toast.configure();
 export default function EditItemForm(props) {
     const {state} = useLocation();
     console.log(state);
@@ -35,7 +38,11 @@ export default function EditItemForm(props) {
           .put(url, foodListitems)
           .then((res) => {
             console.log("res.data: ", res.data);
-            alert("Updated Successfully")
+            toast.success( "Updated Successfully", {
+                position: toast.POSITION.TOP_CENTER,
+                autoClose:1000
+              });
+            // alert("Updated Successfully")
             navigate("/fooditems")
           })
           .catch((err) => {

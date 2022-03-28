@@ -16,7 +16,10 @@
   z-index: 10;
   
 }
-
+.cartempty{
+  color:#8a2b06;
+  /* font-size: 30px; */
+}
 .fooditems {
   height: auto;
   display: grid;
@@ -99,6 +102,15 @@ margin-top: 100px;
 }
 .imgcard-top1{
   width:150px;
+}
+.cart_img2{
+  width: 300px;
+  height: 300px;
+  
+}
+.emptybtn{
+  background-color: #8a2b06;
+  color: white;
 }
 @media (min-width:319px) and (max-width:480px){
   .Carthead {

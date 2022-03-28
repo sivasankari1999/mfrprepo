@@ -20,7 +20,7 @@ function Resetpassword() {
   console.log(token);
 
   const resetPasswordHandler = (e) => {
-    alert("Clicked");
+    // alert("Clicked");
     e.preventDefault();
 
     const url = "http://localhost:5000/new-password";

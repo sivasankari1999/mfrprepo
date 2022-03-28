@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import AdminHome1 from "./AdminHome1";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+toast.configure();
 export default function AddItemForm() {
     let Starters = "Starters";
     let Briyani = "Briyani";
@@ -29,7 +32,11 @@ export default function AddItemForm() {
             .post(url, foodListitems)
             .then((res) => {
                 console.log("res.data: ", res.data);
-                alert(res.data.message);
+                // alert(res.data.message);
+                toast.success(res.data.message , {
+                    position: toast.POSITION.TOP_CENTER,
+                    autoClose:1000
+                  });
                 navigate("/fooditems");
             })
             .catch((err) => {
