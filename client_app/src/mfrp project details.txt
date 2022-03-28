@@ -1,0 +1,9 @@
+sivasankari => home page ,add to cart, payment, food items , delete
+yogapriya=> login, sign up, forgot,nodemailer, toast, additem,edititem
+kowsalya=> menu, responsive few, adminhomepage UI, created db in atlas,collected data
+Ramprasath=> responsive few ,orderonline UI, users 
+mausami=> about us , contact us ,orders
+
+
+
+backend done as grp in first

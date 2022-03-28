@@ -24,6 +24,12 @@ export default function AdminHome1() {
                 </div>
                 <div className="w3-container">
 
+                <h2 className="adminwelcome">Welcome, Admin!</h2>
+                <img
+                  src={require("../../../assets/img/adminimg.jpg")}
+                  alt=""
+                  className="adminimh"
+                />
 
                 </div>
             </div>

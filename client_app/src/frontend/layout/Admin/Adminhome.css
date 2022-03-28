@@ -127,6 +127,12 @@ body {
     width:800px;
     margin-left: 360px;
   }
+  .adminwelcome{
+   float: left;
+   margin-left: 130px;
+   margin-top: 30px;
+   color: #8a2b06;
+  }
   @media (max-width:480px){
   }
   @media (min-width: 481px) and (max-width:760px){
