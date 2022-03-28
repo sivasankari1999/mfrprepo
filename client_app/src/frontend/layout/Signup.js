@@ -4,7 +4,9 @@ import Header from "./Header";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+toast.configure();
 function Signup(props) {
   let navigate = useNavigate();
   const [data, setData] = useState({
@@ -30,6 +32,10 @@ function Signup(props) {
         setfullNameErr("");
         setEmailErr("");
         setpasswordErr("");
+        toast.success("Registered Successfully" , {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose:1000
+        });
         navigate("/login");
       })
       .catch((err) => {

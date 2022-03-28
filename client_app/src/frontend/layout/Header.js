@@ -12,15 +12,15 @@ import Signup from "./Signup";
 
 export default function Header() {
   let navigate = useNavigate();
-  const [loginCard, setloginCard] = useState(false);
+  // const [loginCard, setloginCard] = useState(false);
 
-  function getstartHandler() {
-    setloginCard(true);
-  }
-  function logincloseHandler() {
-    // alert("clicked");
-    setloginCard(false);
-  }
+  // function getstartHandler() {
+  //   setloginCard(true);
+  // }
+  // function logincloseHandler() {
+  //   // alert("clicked");
+  //   setloginCard(false);
+  // }
 
   return (
     <div>

@@ -44,23 +44,7 @@ function Login() {
           console.log(errormsg);
         }
       });
-    // try {
-    //   const url = "http://localhost:5005/login";
-    //   const { data: res } = await axios.post(url, data);
-    //   console.log("res: ", res);
-    //   if (res) {
-    //     navigate("/home");
-    //   }
-    // } catch (err) {
-    //   if (err.response) {
-    //     console.log(err);
-    //     console.log("err.response: ", err.response);
-    //     console.log("err.response.ok: ", err.response.ok);
-    //     console.log("err.response.data: ", err.response.data);
-    //     setErrormsg(err.response.data.message);
-    //     console.log(errormsg);
-    //   }
-    // }
+   
     setErrormsg("");
   };
   return (

@@ -19,12 +19,12 @@ export default function OrderOnline({ cartLength }) {
   let All = "All;";
   const [errormsg, setErrormsg] = useState("");
   const [foodList, setfoodList] = useState([]);
-  const getUsers = async () => {
-    const users = await axios.get("http://localhost:5000/OrderOnline");
-    setfoodList(users.data.foodList);
+  const getFoodItems = async () => {
+    const fooditems = await axios.get("http://localhost:5000/OrderOnline");
+    setfoodList(fooditems.data.foodList);
   };
   useEffect(() => {
-    getUsers();
+    getFoodItems();
   }, []);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const addToCart = (food) => {

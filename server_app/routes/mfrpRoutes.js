@@ -17,7 +17,7 @@ const { Cart } = require("../models/cart");
 const { Orders } = require("../models/Orders");
 
 const { log } = require("console");
-const connection_string = process.env.CONNECTION_STRING;
+// const connection_string = process.env.CONNECTION_STRING;
 // let AdminUsermail = "AdminCurry@gmail.com";
 // let AdminUserpwd = "Admin$1234";
 router.post("/signup", async (req, res) => {
@@ -196,9 +196,9 @@ router.get("/OrderOnline", async (req, res) => {
 router.get("/users", async (req, res) => {
     const { body } = req;
     console.log("body:", body);
-    const foodList = await User.find({}, { _id: 0 });
-    console.log("foodlist:", foodList);
-    res.send({ foodList });
+    const UserList = await User.find({}, { _id: 0 });
+    console.log("UserList:", UserList);
+    res.send({ UserList });
 });
 router.post("/deletefood/OrderOnline", async (req, res) => {
     let { body } = req;

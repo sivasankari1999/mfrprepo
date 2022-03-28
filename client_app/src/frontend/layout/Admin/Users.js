@@ -8,7 +8,7 @@ export default function Users() {
     const getUsers = async () => {
         const users = await axios.get("http://localhost:5000/users");
         //console.log(users);
-        setUsersList(users.data.foodList);
+        setUsersList(users.data.UserList);
     };
     useEffect(() => {
         getUsers();
